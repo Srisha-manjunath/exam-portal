@@ -146,7 +146,7 @@ def inject_user():
     return {"current_user": user}
 
 # -----------------------------
-# Routes (keep your existing ones)
+# Routes
 # -----------------------------
 @app.route("/")
 def index():
@@ -161,8 +161,7 @@ def health_check():
         "sklearn": sklearn_available
     })
 
-# (⚡ Keep your register, login, dashboards, exams, submissions, leaderboard, logout routes here — unchanged)
-# I did not delete any — just shortened this snippet for readability.
+# ⚡ Add your register, login, dashboards, exams, submissions, leaderboard, logout routes here.
 
 # -----------------------------
 # SocketIO events
