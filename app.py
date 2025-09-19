@@ -14,7 +14,11 @@ app.secret_key = os.environ.get("SECRET_KEY", "exam-portal-secret")
 # -----------------------------
 # MongoDB Setup
 # -----------------------------
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/exam_portal")
+MONGO_URI = os.environ.get(
+    "MONGO_URI",
+    "mongodb+srv://srisha1045:Jungk0ok-7@cluster0.muqelad.mongodb.net/exam_portal?retryWrites=true&w=majority&appName=Cluster0"
+)
+
 client = MongoClient(MONGO_URI)
 db = client["exam_portal"]
 
@@ -113,5 +117,5 @@ def logout():
 # -----------------------------
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
-    logger.info(f"Starting Flask only on port {port}")
+    logger.info(f"Starting Flask on port {port}")
     app.run(host="0.0.0.0", port=port, debug=False)
