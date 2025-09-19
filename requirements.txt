@@ -1,7 +1,5 @@
-Flask==2.3.3
-flask-socketio==5.3.6
-eventlet==0.33.3
-pymongo[srv]==4.6.1
-Werkzeug==2.3.7
-gunicorn==21.2.0
-python-dotenv==1.0.1
+flask==3.0.3
+werkzeug==3.0.3
+pymongo==4.9.2
+dnspython==2.6.1
+gunicorn==23.0.0
