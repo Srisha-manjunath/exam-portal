@@ -1,0 +1,12 @@
+/* Basic 3D-ish card and sidebar styles */
+body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+aside { box-shadow: 6px 6px 20px rgba(0,0,0,0.12); }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+/* subtle glass */
+.bg-white/5 { background-color: rgba(255,255,255,0.05); }
+/* rounded elevated cards */
+.rounded-2xl { border-radius: 1rem; }
+/* 3D transform on hover */
+.transform:hover { transform: translateZ(10px) scale(1.01); transition: transform 180ms ease; }
+/* improve textarea look */
+textarea { resize: vertical; }

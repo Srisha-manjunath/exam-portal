@@ -1,0 +1,14 @@
+{% extends "base_dashboard.html" %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Submissions for Exam</h2>
+<table class="min-w-full bg-white rounded shadow overflow-hidden">
+  <thead class="bg-gray-50">
+    <tr><th class="p-3 text-left">Student ID</th><th class="p-3 text-left">Marks</th><th class="p-3 text-left">Submitted</th></tr>
+  </thead>
+  <tbody>
+  {% for s in submissions %}
+    <tr class="border-t"><td class="p-3">{{ s.student_id }}</td><td class="p-3">{{ s.marks_obtained }}/{{ s.max_marks }}</td><td class="p-3">{{ s.submitted_at }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base_dashboard.html" %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Available Exams</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  {% for exam in exams %}
+  <div class="bg-white p-4 rounded-lg shadow">
+    <h3 class="font-semibold">{{ exam.title }}</h3>
+    <p class="text-sm text-gray-600">{{ exam.description }}</p>
+    <div class="mt-3">
+      <a href="{{ url_for('take_exam', exam_id=exam._id) }}" class="px-3 py-1 rounded bg-indigo-600 text-white">Take</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

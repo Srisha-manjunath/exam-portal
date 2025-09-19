@@ -1,0 +1,9 @@
+{% extends "base_dashboard.html" %}
+{% block content %}
+<h2 class="text-2xl font-bold mb-4">Leaderboard</h2>
+<ol class="bg-white rounded shadow p-4 space-y-2">
+  {% for s in submissions %}
+  <li class="flex justify-between"><div>{{ loop.index }}. {{ s.student_id }}</div><div>{{ s.marks_obtained }}</div></li>
+  {% endfor %}
+</ol>
+{% endblock %}
