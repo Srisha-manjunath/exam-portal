@@ -16,10 +16,11 @@ app.secret_key = os.environ.get("SECRET_KEY", "exam-portal-secret")
 # -----------------------------
 MONGO_URI = os.environ.get(
     "MONGO_URI",
-    "mongodb+srv://srisha1045:Jungk0ok-7@cluster0.muqelad.mongodb.net/exam_portal?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://srisha1045:Jungk0ok-7@cluster0.muqelad.mongodb.net/exam_portal?retryWrites=true&w=majority"
 )
 
-client = MongoClient(MONGO_URI)
+# Force TLS to avoid Render ↔ Atlas SSL issues
+client = MongoClient(MONGO_URI, tls=True, tlsAllowInvalidCertificates=True)
 db = client["exam_portal"]
 
 # -----------------------------
