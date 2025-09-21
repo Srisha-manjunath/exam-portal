@@ -1,9 +1,8 @@
 Flask
 Flask-Login
 pymongo
-flask-pymongo
 bcrypt
-dnspython
-python-dotenv
-gunicorn
+flask-pymongo
+certifi
 rapidfuzz
+gunicorn
