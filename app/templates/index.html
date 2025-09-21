@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h1 class="text-center fw-bold mb-4">🚀 Welcome to Essay Exam Portal</h1>
+  <p class="text-center">A modern platform for Students and Staff.</p>
+  <div class="d-flex justify-content-center gap-3">
+    <a href="{{ url_for('main.login') }}" class="btn btn-primary btn-lg shadow">Login</a>
+    <a href="{{ url_for('main.signup') }}" class="btn btn-success btn-lg shadow">Signup</a>
+  </div>
+{% endblock %}

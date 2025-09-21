@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Staff Dashboard{% endblock %}
+
+{% block content %}
+  <h2 class="text-center mb-4">👨‍🏫 Staff Dashboard</h2>
+  
+  <a href="{{ url_for('main.create_exam') }}" class="btn btn-success mb-3 shadow">+ Create Exam</a>
+  
+  {% if exams %}
+    <ul class="list-group shadow">
+      {% for exam in exams %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          {{ exam.question }}
+          <a href="{{ url_for('main.results', exam_id=exam._id) }}" class="btn btn-info btn-sm">
+            View Results
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted text-center">No exams created yet.</p>
+  {% endif %}
+{% endblock %}

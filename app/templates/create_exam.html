@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Create Exam{% endblock %}
+
+{% block content %}
+  <h2 class="text-center mb-4">✏️ Create Exam</h2>
+
+  <form method="POST" class="shadow p-4 rounded bg-light">
+    <div class="mb-3">
+      <label class="form-label">Question</label>
+      <textarea name="question" class="form-control" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Key Answer</label>
+      <textarea name="key_answer" class="form-control" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+    <a href="{{ url_for('main.home') }}" class="btn btn-secondary">Cancel</a>
+  </form>
+{% endblock %}

@@ -6,3 +6,4 @@ bcrypt
 dnspython
 python-dotenv
 gunicorn
+rapidfuzz
